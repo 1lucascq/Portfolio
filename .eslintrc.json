@@ -1,89 +1,55 @@
 {
-  "root": true,
-  "env": {
-    "browser": false,
-    "node": true,
-    "es2021": true,
-    "jest": true
-  },
-  "extends": [
-    "plugin:@typescript-eslint/recommended",
-    "airbnb-base",
-    "plugin:editorconfig/noconflict",
-    "plugin:mocha/recommended",
-    "airbnb-typescript/base"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": 2019,
-    "sourceType": "module",
-    "project": "./tsconfig.json"
-  },
-  "plugins": [
-    "@typescript-eslint",
-    "sonarjs",
-    "editorconfig",
-    "mocha"
-  ],
-  "rules": {
-    "no-console": "off",
-    "camelcase": "warn",
-    "arrow-parens": [
-      2,
-      "always"
-    ],
-    "quotes": [
-      2,
-      "single"
-    ],
-    "implicit-arrow-linebreak": "off",
-    "consistent-return": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        "argsIgnorePattern": "^_",
-        "ignoreRestSiblings": true
-      }
-    ],
-    "no-unused-vars": [
-      "error",
-      {
-        "argsIgnorePattern": "^_",
-        "ignoreRestSiblings": true
-      }
-    ],
-    "object-curly-newline": "off",
-    "max-params": [
-      "error",
-      4
-    ],
-    "max-lines": [
-      "error",
-      250
-    ],
-    "max-lines-per-function": [
-      "error",
-      {
-        "max": 20,
-        "skipBlankLines": true,
-        "skipComments": true
-      }
-    ],
-    "max-len": [
-      "error",
-      100,
-      {
-        "ignoreComments": true
-      }
-    ],
-    "complexity": [
-      "error",
-      5
-    ],
-    "import/no-extraneous-dependencies": [
-      "off"
-    ],
-    "sonarjs/cognitive-complexity": [
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"airbnb"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": [
+		"react",
+		"react-hooks",
+		"sonarjs",
+		"@typescript-eslint"
+	],
+	"settings": {
+		"import/resolver": {
+		"typescript": {}
+		}
+	},
+	"rules": {
+		"no-undef": "off",
+		"react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+			"ts": "never",
+			"tsx": "never"
+			}
+		],
+		"@typescript-eslint/explicit-function-return-type": [
+			"error",
+			{
+			"allowExpressions": true
+			}
+		],
+		"no-shadow": "off",
+		"@typescript-eslint/no-shadow": ["error"],
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"react/prop=types": "off",
+		"sonarjs/cognitive-complexity": [
       "error",
       5
     ],
@@ -135,5 +101,13 @@
     "sonarjs/no-inverted-boolean-check": [
       "error"
     ]
-  }
+	},
+	"overrides": [
+		{
+				"files": ["*.ts"],
+				"rules": {
+						"no-undef": "off"
+				}
+		}
+	]
 }

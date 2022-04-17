@@ -1,11 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 
-function App() {
+function App(): JSX.Element {
   return (
-    <div>
+    <>
       bla
-    </div>
+    </>
   );
 }
 

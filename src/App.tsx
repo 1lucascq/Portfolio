@@ -1,6 +1,8 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import About from './pages/About';
+import About from './sections/About';
+import Contacts from './sections/Contacts';
+import Projects from './sections/Projects';
 import GlobalStyles from './styles/globalStyles';
 import theme from './styles/theme';
 
@@ -9,6 +11,8 @@ function App(): JSX.Element {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <About />
+      <Projects />
+      <Contacts />
     </ThemeProvider>
   );
 }

@@ -29,8 +29,13 @@
 	},
 	"rules": {
 		"no-undef": "off",
+		"no-console": "off",
 		"arrow-parens":"off",
 		"react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+		"react/function-component-definition": [0, {
+			"namedComponents": ["function-declaration", "function-expression", "arrow-function"],
+			"unnamedComponents": ["function-expression", "arrow-function"]
+		}],
 		"import/extensions": [
 			"error",
 			"ignorePackages",

@@ -7,6 +7,10 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   
+  html, body {
+    scroll-behavior: smooth;
+  }
+
   body {
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};

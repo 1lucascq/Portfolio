@@ -10,7 +10,7 @@ const About = (): JSX.Element => {
       <TypewriterAnimation />
       <AboutContainer>
 
-        <div>
+        <div id="Sobre">
           <p>Olá, meu nome é Lucas.</p>
           <p>Sou um Desenvolvedor Full-Stack Jr.</p>
           <p>

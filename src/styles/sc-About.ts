@@ -13,13 +13,8 @@ const AboutContainer = styled.section`
     flex-direction: column;
     gap: 1em;
     width: 100%;
+    animation: slideIn 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 5s both;
   }
-
-  /* div > p:only-of-type {
-    text-align: start;
-    color: blue;
-  } */
-
 
   div > p:nth-last-child(1) {
     margin-bottom: 2em;

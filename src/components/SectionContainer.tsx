@@ -4,7 +4,8 @@ import styled from 'styled-components';
 const Container = styled.section`
   width: 100vw;
   height: 100vh;
-  padding: 1em;
+  /* margin: auto; */
+  padding: .5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +13,7 @@ const Container = styled.section`
 `;
 
 type Props = {
-  children: JSX.Element
+  children: JSX.Element | JSX.Element[]
 }
 
 // const SectionContainer: React.FC<Props> = ({ children }) => {

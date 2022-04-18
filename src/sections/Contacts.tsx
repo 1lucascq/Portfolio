@@ -5,7 +5,7 @@ const Contacts = (): JSX.Element => {
   console.log('bla');
   return (
     <SectionContainer>
-      <div>
+      <div id="Contato">
         contacts
       </div>
     </SectionContainer>

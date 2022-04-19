@@ -17,7 +17,7 @@ const ProjectsContainer = styled.section<ISectionProps>`
   width: 95%;
   opacity: 0;
   animation: ${
-  props => (props.isInScreen ? 'slideIn 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;' : 'none')
+  props => (props.isInScreen ? props.theme.animation.fadeIn() : 'none')
 };
   
   h1 {

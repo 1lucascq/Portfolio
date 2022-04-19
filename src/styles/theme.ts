@@ -6,7 +6,9 @@ const theme = {
     secondary: '#F5F5F5',
     var: '#ff7096',
     varName: '#30338e',
-
+  },
+  animation: {
+    fadeIn: (delay = 0.5) => `slideIn 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) ${delay}s both`,
   },
   // se for fazer light theme mas acho q nao
   light: {

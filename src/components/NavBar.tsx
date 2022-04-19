@@ -10,7 +10,7 @@ const Header = styled.header`
   align-items: center;
   padding: 2em;
   height: 7vh;
-  animation: slideIn 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 5s both;;
+  animation: ${props => props.theme.animation.fadeIn(5.4)};
   z-index: 1000000;
   
   nav, ul {

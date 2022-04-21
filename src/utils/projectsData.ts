@@ -32,7 +32,7 @@ enum TechStack {
   sequelize = 'Sequelize',
 }
 
-const projects: IProjectList = {
+const projectsData: IProjectList = {
   toDisplay: [
     {
       title: 'Star Wars Planets Search',
@@ -149,4 +149,4 @@ const projects: IProjectList = {
 
   ],
 };
-export default projects;
+export default projectsData;

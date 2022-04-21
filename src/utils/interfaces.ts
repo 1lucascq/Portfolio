@@ -13,6 +13,10 @@ export interface IProjectList {
   toStore: IProject[];
 }
 
+export interface IProjectCard {
+  project: IProject;
+}
+
 export interface ISectionProps {
   isInScreen?: boolean
 }

@@ -3,10 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components';
 import ProjectCard from '../components/ProjectCard';
 import SectionContainer from '../components/SectionContainer';
-
-interface ISectionProps {
-  isInScreen?: boolean
-}
+import { ISectionProps } from '../utils/interfaces';
 
 const ProjectsContainer = styled.section<ISectionProps>`
   display: flex;

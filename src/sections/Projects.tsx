@@ -3,7 +3,8 @@ import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components';
 import ProjectCard from '../components/ProjectCard';
 import SectionContainer from '../components/SectionContainer';
-import { ISectionProps } from '../utils/interfaces';
+import { IProject, ISectionProps } from '../utils/interfaces';
+import projectsData from '../utils/projectsData';
 
 const ProjectsContainer = styled.section<ISectionProps>`
   display: flex;
@@ -17,14 +18,15 @@ const ProjectsContainer = styled.section<ISectionProps>`
   props => (props.isInScreen ? props.theme.animation.fadeIn() : 'none')
 };
   
-  h1 {
+  #Projetos {
     text-align: center;
     margin: 5em;
   }
 
-  p {
+  h1 ~ p {
     margin-bottom: 3em;
   }
+
   `;
 
 const Projects = (): JSX.Element => {
@@ -38,12 +40,10 @@ const Projects = (): JSX.Element => {
     if (inView) {
       setInScreen(true);
     }
-    console.log(isInScreen);
-    // return () => {
-    //   second;
-    // };
   }, [inView, isInScreen]);
 
+  const data = projectsData;
+  console.log(data);
   return (
     <SectionContainer>
       <ProjectsContainer isInScreen={isInScreen}>
@@ -53,8 +53,9 @@ const Projects = (): JSX.Element => {
           e abaixo mostro alguns deles desenvolvidos durante o curso da Trybe ou
           buscando por em prática alguma ferramenta extra que busquei conhecer.
         </p>
-
-        <ProjectCard />
+        {data.toDisplay.map((project: IProject) => (
+          <ProjectCard project={project} />
+        ))}
       </ProjectsContainer>
     </SectionContainer>
   );

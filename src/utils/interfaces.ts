@@ -4,6 +4,7 @@ export interface IProject {
   type: string;
   tech: string[];
   deploy?: string;
+  cover: string;
   gitHub: string;
 }
 

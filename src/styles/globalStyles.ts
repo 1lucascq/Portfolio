@@ -10,6 +10,8 @@ export default createGlobalStyle`
   html, body {
     scroll-behavior: smooth;
     scroll-padding-top: 300px;
+    width: 100%;
+    height: 100%;
   }
 
   body {

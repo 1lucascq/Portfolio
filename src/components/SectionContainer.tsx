@@ -17,13 +17,14 @@ type Props = {
 }
 
 // const SectionContainer: React.FC<Props> = ({ children }) => {
-const SectionContainer = ({ children }: Props): JSX.Element => {
-  console.log('bla');
-  return (
-    <Container>
-      {children}
-    </Container>
-  );
-};
+// const SectionContainer = ({ children }: Props): JSX.Element => {
+//   console.log('bla');
+//   return (
+
+const SectionContainer = ({ children }: Props): JSX.Element => (
+  <Container>
+    {children}
+  </Container>
+);
 
 export default SectionContainer;

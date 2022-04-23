@@ -104,9 +104,10 @@ const Card = styled.div`
 
 const ProjectCard: FC<IProjectCard> = ({ project }): JSX.Element => {
   const {
-    title, description, cover, tech, deploy, gitHub,
+    title, description, cover, tech,
+    // deploy, gitHub,
   } = project;
-  console.log(deploy, gitHub);
+  // console.log(deploy, gitHub);
   return (
     <Card>
       <div id="card-inner-wrapper">
@@ -118,7 +119,7 @@ const ProjectCard: FC<IProjectCard> = ({ project }): JSX.Element => {
           <p>{description}</p>
           <ul className="tech-list">
             {tech.map(technology => (
-              <li>{technology}</li>
+              <li key={technology}>{technology}</li>
             ))}
           </ul>
         </div>

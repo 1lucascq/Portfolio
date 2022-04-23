@@ -30,12 +30,13 @@ const Animation = styled.div`
 
   h1::after {
     width: 0.125em;
-    background: black;
+    background: transparent;
     animation:
       typewriter ${cursorSpeed}s steps(${text.length}) 1s forwards,
       blink 800ms steps(${text.length}) infinite
   }
 
+  //                              --> OTA ANIMAÇÃO
   /* h4 {
     opacity: 0;
     transform: translateY(2rem);
@@ -50,10 +51,11 @@ const Animation = styled.div`
 
   @keyframes blink {
     to {
-      background: transparent ;
+      background: black ;
     }
   }
 
+  //                              --> OTA ANIMAÇÃO
   /* @keyframes fadeInUp {
     to {
       opacity: 1;
@@ -63,16 +65,17 @@ const Animation = styled.div`
 
 `;
 
-const TypewriterAnimation = (): JSX.Element => {
-  console.log('bla');
-  return (
-    <Animation>
-      <h1>
-        {text}
-      </h1>
-      {/* <h4>TESTANDO A OTA ANIMAÇÃO</h4> */}
-    </Animation>
-  );
-};
+// const TypewriterAnimation = (): JSX.Element => {
+//   console.log('bla');
+//   return (
+
+const TypewriterAnimation = (): JSX.Element => (
+  <Animation>
+    <h1>
+      {text}
+    </h1>
+    {/* <h4>TESTANDO A OTA ANIMAÇÃO</h4> */}
+  </Animation>
+);
 
 export default TypewriterAnimation;

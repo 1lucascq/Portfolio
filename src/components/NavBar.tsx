@@ -10,6 +10,7 @@ const Header = styled.header`
   align-items: center;
   padding: 2em;
   height: 7vh;
+  /* width: 85vw; */
   animation: ${props => props.theme.animation.fadeIn(5.4)};
   z-index: 1000000;
   
@@ -32,21 +33,22 @@ const Header = styled.header`
 
 `;
 
-const NavBar = (): JSX.Element => {
-  console.log('bla');
-  return (
-    <Header>
-      <nav>
-        <ul>
+// const NavBar = (): JSX.Element => {
+//   console.log('bla');
+//   return (
 
-          <li><a href="#Sobre">Sobre</a></li>
-          <li><a href="#Projetos">Projetos</a></li>
-          <li><a href="#Contato">Contato</a></li>
+const NavBar = (): JSX.Element => (
+  <Header>
+    <nav>
+      <ul>
 
-        </ul>
-      </nav>
-    </Header>
-  );
-};
+        <li><a href="#Sobre">Sobre</a></li>
+        <li><a href="#Projetos">Projetos</a></li>
+        <li><a href="#Contato">Contato</a></li>
+
+      </ul>
+    </nav>
+  </Header>
+);
 
 export default NavBar;

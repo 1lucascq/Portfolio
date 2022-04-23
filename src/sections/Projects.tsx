@@ -32,9 +32,10 @@ const ProjectsContainer = styled.section<ISectionProps>`
 const Projects = (): JSX.Element => {
   // const [ref, inView, entry] = useInView({ threshold: 1 });
   const [isInScreen, setInScreen] = useState(false);
-  const [ref, inView, entry] = useInView();
-  console.log('inView', inView);
-  console.log('entry', entry);
+  // const [ref, inView, entry] = useInView();
+  const [ref, inView] = useInView();
+  // console.log('inView', inView);
+  // console.log('entry', entry);
 
   useEffect(() => {
     if (inView) {
@@ -43,7 +44,7 @@ const Projects = (): JSX.Element => {
   }, [inView, isInScreen]);
 
   const data = projectsData;
-  console.log(data);
+  // console.log(data);
   return (
     <SectionContainer>
       <ProjectsContainer isInScreen={isInScreen}>
@@ -54,7 +55,7 @@ const Projects = (): JSX.Element => {
           buscando por em prática alguma ferramenta extra que busquei conhecer.
         </p>
         {data.toDisplay.map((project: IProject) => (
-          <ProjectCard project={project} />
+          <ProjectCard project={project} key={project.title} />
         ))}
       </ProjectsContainer>
     </SectionContainer>

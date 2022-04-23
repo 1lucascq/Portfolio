@@ -14,6 +14,7 @@ const lines = [
   '}',
 ];
 
+// TODO: check if it is necessary to regulate the overall speed
 const speed = 0.5;
 
 const delay = [
@@ -81,7 +82,7 @@ const AnimationWrapper = styled.section`
     background: transparent;
     animation:
       typewriter ${speed}s steps(${lines[0].length}) ${delay[0]}s forwards,
-      blink 800ms steps(${lines[0].length}) ${delay[0]}s 1.25;
+      blink 800ms steps(${lines[0].length * 5}) ${delay[0]}s 1.25;
   }
 
   .line2 {
@@ -107,7 +108,7 @@ const AnimationWrapper = styled.section`
     background: transparent;
     animation:
       typewriter ${speed}s steps(${lines[1].length}) ${delay[1]}s forwards,
-      blink 800ms steps(${lines[1].length}) ${delay[1]}s 1.25;
+      blink 800ms steps(${lines[1].length * 5}) ${delay[1]}s 1.25;
   }
 
   .line3 {
@@ -133,7 +134,7 @@ const AnimationWrapper = styled.section`
     background: transparent;
     animation:
       typewriter ${speed}s steps(${lines[2].length}) ${delay[2]}s forwards,
-      blink 800ms steps(${lines[2].length}) ${delay[2]}s 1.25;
+      blink 800ms steps(${lines[2].length * 5}) ${delay[2]}s 1.25;
   }
 
   .line4 {
@@ -159,7 +160,7 @@ const AnimationWrapper = styled.section`
     background: transparent;
     animation:
       typewriter ${speed}s steps(${lines[3].length}) ${delay[3]}s forwards,
-      blink 800ms steps(${lines[3].length}) ${delay[3]}s 1.25;
+      blink 800ms steps(${lines[3].length * 5}) ${delay[3]}s 1.25;
   }
 
   .line5 {
@@ -185,7 +186,7 @@ const AnimationWrapper = styled.section`
     background: transparent;
     animation:
       typewriter ${speed}s steps(${lines[4].length}) ${delay[4]}s forwards,
-      blink 800ms steps(${lines[4].length}) ${delay[4]}s 1.25;
+      blink 800ms steps(${lines[4].length * 7}) ${delay[4]}s 1.25;
   }
 
   .line6 {
@@ -211,7 +212,7 @@ const AnimationWrapper = styled.section`
     background: transparent;
     animation:
       typewriter ${speed}s steps(${lines[5].length}) ${delay[5]}s forwards,
-      blink 800ms steps(${lines[5].length}) ${delay[5]}s 1.25;
+      blink 800ms steps(${lines[5].length * 7}) ${delay[5]}s 1.25;
   }
 
   .line7 {
@@ -237,7 +238,7 @@ const AnimationWrapper = styled.section`
     background: transparent;
     animation:
       typewriter ${speed}s steps(${lines[6].length}) ${delay[6]}s forwards,
-      blink 800ms steps(${lines[6].length}) ${delay[6]}s 1.25;
+      blink 800ms steps(${lines[6].length * 7}) ${delay[6]}s 1.25;
   }
 
   .line8 {
@@ -289,7 +290,7 @@ const AnimationWrapper = styled.section`
     background: transparent;
     animation:
       typewriter ${speed}s steps(${lines[8].length}) ${delay[8]}s forwards,
-      blink 800ms steps(2) ${delay[8]}s 1.25;
+      blink 800ms steps(${lines[8].length * 5}) ${delay[8]}s 1.25;
   }
 
   .line10 {

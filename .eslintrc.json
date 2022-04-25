@@ -30,6 +30,7 @@
 	"rules": {
 		"no-undef": "off",
 		"no-unused-vars": "off",
+		"no-param-reassign": ["error", { "props": false }],
 		"@typescript-eslint/no-unused-vars": "error",
 		"no-console": "off",
 		"arrow-parens":"off",

@@ -6,7 +6,7 @@ const text = '<h1> Hello, World! </h1>';
 const cursorSpeed = 4;
 const Animation = styled.div`
   h1 {
-    font-family: monospace;
+    font-family: 'Courier New', Courier, monospace;
     position: relative;
     color: ${props => props.theme.colors.primary};
     margin-bottom: 5em;
@@ -25,14 +25,14 @@ const Animation = styled.div`
 
   h1::before {
     background-color: ${props => props.theme.colors.background};
-    animation: typewriter ${cursorSpeed}s steps(${text.length}) 1s forwards;
+    animation: typewriter ${cursorSpeed}s steps(${text.length}) 14s forwards;
   }
 
   h1::after {
     width: 0.125em;
     background: transparent;
     animation:
-      typewriter ${cursorSpeed}s steps(${text.length}) 1s forwards,
+      typewriter ${cursorSpeed}s steps(${text.length}) 14s forwards,
       blink 800ms steps(${text.length}) infinite
   }
 
@@ -54,6 +54,7 @@ const Animation = styled.div`
       background: black ;
     }
   }
+
 
   //                              --> OTA ANIMAÇÃO
   /* @keyframes fadeInUp {

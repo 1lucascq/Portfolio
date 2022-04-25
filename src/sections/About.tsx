@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionContainer from '../components/SectionContainer';
 import TypewriterAnimation from '../components/TypewriterAnimation';
-import AboutContainer from '../styles/sc-About';
+import AboutContainer from '../styles/StylesAbout';
 
 // const About = (): JSX.Element => {
 //   console.log('bla');

@@ -9,9 +9,8 @@ const Header = styled.header`
   background: ${props => props.theme.colors.background};
   align-items: center;
   padding: 2em;
-  height: 7vh;
-  /* width: 85vw; */
-  animation: ${props => props.theme.animation.fadeIn(5.4)};
+  height: 6vh;
+  animation: ${props => props.theme.animation.fadeIn(19)};
   z-index: 1000000;
   
   nav, ul {

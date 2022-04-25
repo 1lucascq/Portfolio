@@ -15,7 +15,8 @@ const lines = [
 ];
 
 // TODO: check if it is necessary to regulate the overall speed
-const speed = 0.5;
+const speed = 0.7;
+const duration = 1;
 
 const delay = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
@@ -26,6 +27,7 @@ const AnimationWrapper = styled.section`
   min-height: 100vh;
   padding: .5em;
   display: flex;
+  /* display: none; */
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
@@ -42,8 +44,9 @@ const AnimationWrapper = styled.section`
     align-self: center;
     flex-wrap: wrap;
     width: 17em;
-    margin-left: 4em;
+    margin-left: 1.5em;
     color: whitesmoke;
+    animation: slideOut 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 13s both
   }
 
   div.wrapper div:not(:first-child) {
@@ -82,7 +85,7 @@ const AnimationWrapper = styled.section`
     background: transparent;
     animation:
       typewriter ${speed}s steps(${lines[0].length}) ${delay[0]}s forwards,
-      blink 800ms steps(${lines[0].length * 5}) ${delay[0]}s 1.25;
+      blink 800ms steps(${lines[0].length * 5}) ${delay[0]}s ${duration};
   }
 
   .line2 {
@@ -108,7 +111,7 @@ const AnimationWrapper = styled.section`
     background: transparent;
     animation:
       typewriter ${speed}s steps(${lines[1].length}) ${delay[1]}s forwards,
-      blink 800ms steps(${lines[1].length * 5}) ${delay[1]}s 1.25;
+      blink 800ms steps(${lines[1].length * 5}) ${delay[1]}s ${duration};
   }
 
   .line3 {
@@ -134,7 +137,7 @@ const AnimationWrapper = styled.section`
     background: transparent;
     animation:
       typewriter ${speed}s steps(${lines[2].length}) ${delay[2]}s forwards,
-      blink 800ms steps(${lines[2].length * 5}) ${delay[2]}s 1.25;
+      blink 800ms steps(${lines[2].length * 5}) ${delay[2]}s ${duration};
   }
 
   .line4 {
@@ -160,7 +163,7 @@ const AnimationWrapper = styled.section`
     background: transparent;
     animation:
       typewriter ${speed}s steps(${lines[3].length}) ${delay[3]}s forwards,
-      blink 800ms steps(${lines[3].length * 5}) ${delay[3]}s 1.25;
+      blink 800ms steps(${lines[3].length * 5}) ${delay[3]}s ${duration};
   }
 
   .line5 {
@@ -186,7 +189,7 @@ const AnimationWrapper = styled.section`
     background: transparent;
     animation:
       typewriter ${speed}s steps(${lines[4].length}) ${delay[4]}s forwards,
-      blink 800ms steps(${lines[4].length * 7}) ${delay[4]}s 1.25;
+      blink 800ms steps(${lines[4].length * 7}) ${delay[4]}s ${duration};
   }
 
   .line6 {
@@ -212,7 +215,7 @@ const AnimationWrapper = styled.section`
     background: transparent;
     animation:
       typewriter ${speed}s steps(${lines[5].length}) ${delay[5]}s forwards,
-      blink 800ms steps(${lines[5].length * 7}) ${delay[5]}s 1.25;
+      blink 800ms steps(${lines[5].length * 7}) ${delay[5]}s ${duration};
   }
 
   .line7 {
@@ -238,7 +241,7 @@ const AnimationWrapper = styled.section`
     background: transparent;
     animation:
       typewriter ${speed}s steps(${lines[6].length}) ${delay[6]}s forwards,
-      blink 800ms steps(${lines[6].length * 7}) ${delay[6]}s 1.25;
+      blink 800ms steps(${lines[6].length * 7}) ${delay[6]}s ${duration};
   }
 
   .line8 {
@@ -264,7 +267,7 @@ const AnimationWrapper = styled.section`
     background: transparent;
     animation:
       typewriter ${speed}s steps(${lines[7].length}) ${delay[7]}s forwards,
-      blink 800ms steps(${lines[7].length}) ${delay[7]}s 1.25;
+      blink 800ms steps(${lines[7].length}) ${delay[7]}s ${duration};
   }
 
   .line9 {
@@ -290,7 +293,7 @@ const AnimationWrapper = styled.section`
     background: transparent;
     animation:
       typewriter ${speed}s steps(${lines[8].length}) ${delay[8]}s forwards,
-      blink 800ms steps(${lines[8].length * 5}) ${delay[8]}s 1.25;
+      blink 800ms steps(${lines[8].length * 5}) ${delay[8]}s ${duration};
   }
 
   .line10 {
@@ -317,9 +320,6 @@ const AnimationWrapper = styled.section`
     animation:
       typewriter ${speed}s steps(2) ${delay[9]}s forwards,
       blink 800ms steps(2) ${delay[9]}s infinite
-    /* animation:
-      typewriter ${speed}s steps(${lines[9].length}) ${delay[9]}s forwards,
-      blink 800ms steps(${lines[9].length}) ${delay[9]}s infinite; */
   }
 
   .const-highlight {
@@ -342,21 +342,28 @@ const AnimationWrapper = styled.section`
     color: whitesmoke;
   }
 
+  @keyframes identifier {
+    
+  }
+
 `;
 
 const Animation = (): JSX.Element => {
   const line1 = useRef<HTMLParagraphElement>(null);
+  const animation = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
-    if (line1.current !== null) {
-      console.log(line1.current?.classList);
+    if (animation.current) {
+      setTimeout(() => {
+        document.body.style.overflow = 'visible';
+        if (animation.current) {
+          animation.current.style.display = 'none';
+        }
+      }, 14100);
     }
-    console.log(line1.current?.style.animation);
-  }, [line1]);
-
-  console.log('render');
+  }, []);
   return (
-    <AnimationWrapper>
+    <AnimationWrapper ref={animation}>
       <div className="wrapper">
         <div>
           <p className="line1" ref={line1}>
@@ -460,158 +467,3 @@ const Animation = (): JSX.Element => {
 };
 
 export default Animation;
-
-// import React from 'react';
-// import styled from 'styled-components';
-// // import TypewriterAnimation from '../components/TypewriterAnimation';
-
-// const AnimationWrapper = styled.section`
-//   .const-highlight {
-//     color: #c0ad60;
-//   }
-//   .string-highlight {
-//     color: rgba(253, 149, 90, 0.8);
-//   }
-
-//   #typewriter {
-//     font-size: 2em;
-//     margin: 0;
-//     font-family: "Courier New";
-
-//     &:after {
-//       content: "|";
-//       animation: blink 500ms linear infinite alternate;
-//     }
-//   }
-
-//   @-webkit-keyframes blink {
-//     0% {
-//       opacity: 0;
-//     }
-//     100% {
-//       opacity: 1;
-//     }
-//   }
-
-//   @-moz-keyframes blink {
-//     0% {
-//       opacity: 0;
-//     }
-//     100% {
-//       opacity: 1;
-//     }
-//   }
-
-//   @keyframes blink {
-//     0% {
-//       opacity: 0;
-//     }
-//     100% {
-//       opacity: 1;
-//     }
-//   }
-// `;
-
-// const Animation = (): JSX.Element => {
-//   function setupTypewriter(t) {
-//     const HTML = t.innerHTML;
-
-//     t.innerHTML = '';
-
-//     let cursorPosition = 0;
-//     let tag = '';
-//     let writingTag = false;
-//     let tagOpen = false;
-//     const typeSpeed = 100;
-//     let tempTypeSpeed = 0;
-
-//     const type = (): void => {
-//       if (writingTag === true) {
-//         tag += HTML[cursorPosition];
-//       }
-
-//       if (HTML[cursorPosition] === '<') {
-//         tempTypeSpeed = 0;
-//         if (tagOpen) {
-//           tagOpen = false;
-//           writingTag = true;
-//         } else {
-//           tag = '';
-//           tagOpen = true;
-//           writingTag = true;
-//           tag += HTML[cursorPosition];
-//         }
-//       }
-//       if (!writingTag && tagOpen) {
-//         tag.innerHTML += HTML[cursorPosition];
-//       }
-//       if (!writingTag && !tagOpen) {
-//         if (HTML[cursorPosition] === ' ') {
-//           tempTypeSpeed = 0;
-//         } else {
-//           tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-//         }
-//         t.innerHTML += HTML[cursorPosition];
-//       }
-//       if (writingTag === true && HTML[cursorPosition] === '>') {
-//         tempTypeSpeed = (Math.random() * typeSpeed) + 50;
-//         writingTag = false;
-//         if (tagOpen) {
-//           const newSpan = document.createElement('span');
-//           t.appendChild(newSpan);
-//           newSpan.innerHTML = tag;
-//           tag = newSpan.firstChild;
-//         }
-//       }
-
-//       cursorPosition += 1;
-//       if (cursorPosition < HTML.length - 1) {
-//         setTimeout(type, tempTypeSpeed);
-//       }
-//     };
-
-//     return {
-//       type,
-//     };
-//   }
-
-//   const typer = document.getElementById('typewriter');
-
-//   const typewriter = setupTypewriter(typewriter);
-
-//   typewriter.type();
-
-//   return (
-//     // <TypewriterAnimation />
-//     <AnimationWrapper>
-//       <pre id="typewriter">
-//         <span className="const-highlight">const</span>
-//         {' '}
-//         dev =
-//         {' '}
-//         {'{'}
-//         name:
-//         {' '}
-//         <span className="string-highlight">&apos;Foo&apos;</span>
-//         , type:
-//         {' '}
-//         <span className="string-highlight">&apos;Bar&apos;</span>
-//         , location:
-//         {' '}
-//         <span className="string-highlight">&apos;Earth&apos;</span>
-//         , properties:[
-//         <span className="string-highlight">&apos;Javascript&apos;</span>
-//         ,
-//         <span className="string-highlight">&apos;HTML&apos;</span>
-//         ,
-//         <span className="string-highlight">&apos;CSS&apos;</span>
-//         ];
-//         {'}'}
-//         ;
-//       </pre>
-//     </AnimationWrapper>
-
-//   );
-// };
-
-// export default Animation;

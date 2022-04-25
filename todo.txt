@@ -1,0 +1,35 @@
+Tech Stack:
+-SPA;
+-React;
+-eslint;
+-styled-components;
+
+
+[x] - Draw simple design sketch and core functionalities in Excalidraw/Figma;
+[x] - Install dependencies;
+[ ] - Code;
+  [ ] - General:
+    [x] - Create Navbar;
+    [ ] - Define colors;
+    [ ] - Define animations patterns;
+    [x] - Make the scroll smooth;
+    [ ] - Development following the Mobile-First Principle;
+    [ ] - Find a way to fix the excessive width
+  [ ] - About;
+    [x] - Add intro animation;
+      [x] - Add an intro animation;
+    [x] - Add 'About Me' text;
+    [x] - Inform most used technologies;
+  [ ] - Projects;
+    [x] - Add short intro text;
+    [ ] - Create project card;
+    [ ] - Create different card for big screens;
+  [ ] - Contact;
+    [ ] - bla;
+    [ ] - bla;
+    [ ] - bla;
+[ ] - Review design;
+[ ] - Implement responsiveness;
+[ ] - Ask for external review and feedback;
+[ ] - Implement feedback improvements.
+

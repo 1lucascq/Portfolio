@@ -18,6 +18,7 @@ export default createGlobalStyle`
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
     font: 400 16px Roboto, sans-serif;
+    overflow: hidden;
   }
 
   @keyframes slideIn {
@@ -30,6 +31,19 @@ export default createGlobalStyle`
       -webkit-filter: blur(0px);
               filter: blur(0px);
       opacity: 1;
+    }
+  }
+
+  @keyframes slideOut {
+    0% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+    }
+    100% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
     }
   }
 

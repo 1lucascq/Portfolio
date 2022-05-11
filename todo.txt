@@ -32,4 +32,4 @@ Tech Stack:
 [ ] - Implement responsiveness;
 [ ] - Ask for external review and feedback;
 [ ] - Implement feedback improvements.
-
+........

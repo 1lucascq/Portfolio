@@ -12,7 +12,7 @@ import ReactIcon from "@/assets/icons/react.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 
-const techStackItemsArray = [
+const frontStackItemsArray = [
     {
         title: "JavaScript",
         iconType: JavascriptIcon,
@@ -30,13 +30,50 @@ const techStackItemsArray = [
         iconType: CSSIcon,
     },
     {
-        title: "Chrome",
+        title: "Vue",
         iconType: ChromeIcon,
     },
     {
-        title: "GitHub",
+        title: "ESLint",
         iconType: GithubIcon,
     },
+	{
+        title: "TypeScript",
+        iconType: GithubIcon,
+    },
+
+];
+
+const backStackItemsArray = [
+    {
+        title: "Node.js",
+        iconType: JavascriptIcon,
+    },
+    {
+        title: "Express",
+        iconType: ReactIcon,
+    },
+    {
+        title: "Next.js",
+        iconType: HTMLIcon,
+    },
+    {
+        title: "Git",
+        iconType: CSSIcon,
+    },
+    {
+        title: "Docker",
+        iconType: ChromeIcon,
+    },
+    {
+        title: "MongoDB",
+        iconType: GithubIcon,
+    },
+    {
+        title: "MySQL",
+        iconType: GithubIcon,
+    },
+
 ];
 
 const hobbies = [
@@ -80,13 +117,13 @@ const hobbies = [
         title: "Movies",
         emoji: "🎥",
         left: "70%",
-        top: "45",
+        top: "35%",
     },
 ];
 
 export default function AboutSection() {
     return (
-        <section className="py-20">
+        <section className="py-20 lg:py-28">
             <div className="container">
                 <SectionHeader
                     eyebrow="About Me"
@@ -94,50 +131,54 @@ export default function AboutSection() {
                     description="Find out more about me and my journey to becoming a developer."
                 />
                 <div className="mt-20 flex flex-col gap-8">
-                    <Card className="h-[320px]">
-                        <CardHeader
-                            title="My Reads"
-                            description="Check it out the books that I've read"
-                        />
-                        <div className="w-40 mx-auto mt-8">
-                            <Image src={bookImage} alt="book cover" className="" />
-                        </div>
-                    </Card>
-                    <Card className="h-[320px] p-0">
+                    <Card className="h-[320px] md:col-span-3">
                         <CardHeader
                             title="Tech Stack"
                             description="Check the technologies that I'm used to work with"
-                            className="px-6 pt-6"
+                            className=""
                         />
-                        <TechStackItems items={techStackItemsArray} className="mt-6" />
+                        <TechStackItems items={frontStackItemsArray} className="" />
                         <TechStackItems
-                            items={techStackItemsArray}
+                            items={backStackItemsArray}
                             className="mt-6"
-                            itemsWrapperClassName="-translate-x-1/2"
                         />
                     </Card>
-                    <Card className="h-[320px] p-0 flex flex-col">
-                        <CardHeader
-                            title="Beyond the Code"
-                            description="Check it out some of my hobbies."
-                            className="px-6 py-6"
-                        />
-                        <div className="relative flex-1">
-                            {hobbies.map((hobby) => (
-                                <div
-                                    key={hobby.title}
-                                    className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
-									style={{
-										left: hobby.left,
-										top: hobby.top
-									}}
-                                >
-                                    <span className="font-medium text-gray-950">{hobby.emoji}</span>
-                                    <span className="">{hobby.title}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </Card>
+                    <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
+                        <Card className="h-[320px] md:col-span-2 lg:col-span-1">
+                            <CardHeader
+                                title="My Reads"
+                                description="Check it out the books that I've read"
+                            />
+                            <div className="w-40 mx-auto mt-2 md:mt-0">
+                                <Image src={bookImage} alt="book cover" className="" />
+                            </div>
+                        </Card>
+
+                        <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
+                            <CardHeader
+                                title="Beyond the Code"
+                                description="Check it out some of my hobbies."
+                                className="px-6 py-6"
+                            />
+                            <div className="relative flex-1">
+                                {hobbies.map((hobby) => (
+                                    <div
+                                        key={hobby.title}
+                                        className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+                                        style={{
+                                            left: hobby.left,
+                                            top: hobby.top,
+                                        }}
+                                    >
+                                        <span className="font-medium text-gray-950">
+                                            {hobby.emoji}
+                                        </span>
+                                        <span className="">{hobby.title}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </Card>
+                    </div>
                 </div>
             </div>
         </section>

@@ -49,18 +49,16 @@ export default function TestimonialsSection() {
                     title="What clients say about me"
                     description="Don't just take my word for it. See what my clients have to say about my work."
                 />
-                <div className="mt-16 flex overflow-x-clip lg:mt-24 [mask-image:linear-gradient,transparent,black_10%,black_90%,transparent]">
+                <div className="mt-16 flex overflow-x-clip lg:mt-24 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
                     <div className="flex flex-none gap-8">
                         {testimonials.map((testimonial) => (
-                            <Card key={testimonial.name} className="max-w-xs md:p-8 md:max-w-md">
+                            <Card key={testimonial.name} className="max-w-xs p-6 md:p-8 md:max-w-md">
                                 <div className="flex gap-4 items-center">
                                     <div className="size-14 bg-gray-700 inline-flex rounded-full items-center justify-center flex-shrink-0">
                                         <Image
                                             src={testimonial.avatar}
                                             alt={testimonial.name}
                                             className="max-h-full"
-                                            width={100}
-                                            height={100}
                                         />
                                     </div>
                                     <div>

@@ -1,8 +1,8 @@
 import Header from '@/sections/Header';
 import HeroSection from '@/sections/Hero';
-import ProjectsSection from '@/sections/Projects';
+import Experiences from '@/sections/Experiences';
 import TapeSection from '@/sections/Tape';
-import TestimonialsSection from '@/sections/Testimonials';
+// import TestimonialsSection from '@/sections/Testimonials';
 import AboutSection from '@/sections/About';
 import ContactSection from '@/sections/Contact';
 import Footer from '@/sections/Footer';
@@ -12,9 +12,9 @@ export default function Home() {
 		<div>
 			<Header />
 			<HeroSection />
-			<ProjectsSection />
+			<Experiences />
 			<TapeSection />
-			<TestimonialsSection />
+			{/* <TestimonialsSection /> */}
 			<AboutSection />
 			<ContactSection />
 			<Footer />

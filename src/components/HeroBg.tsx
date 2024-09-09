@@ -1,4 +1,3 @@
-import { PropsWithChildren } from 'react';
 import HeroOrbit from '@/components/HeroOrbit';
 import StarIcon from '@/assets/icons/star.svg';
 import SparkleIcon from '@/assets/icons/sparkle.svg';
@@ -10,7 +9,7 @@ export default function HeroBg() {
 	const bigSpin = '15s';
 
 	return (
-		<div className='absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_50%,transparent)]'>
+		<div className='absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_50%,transparent)] -z-10'>
 			<div className='absolute inset-0 -z-10 opacity-5' style={{ backgroundImage: `url(${grainImage.src})` }}></div>
 			<div className='size-[620px] hero-ring' />
 			<div className='size-[820px] hero-ring' />

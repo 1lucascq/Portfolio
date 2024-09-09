@@ -6,13 +6,21 @@ import Card from "@/components/Card";
 import TechStackItems from "@/components/TechStackItems";
 import { motion } from "framer-motion";
 
-import bookImage from "@/assets/images/book-cover.png";
+import CleanCodeCover from "@/assets/images/cleancodecover.avif";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
 import HTMLIcon from "@/assets/icons/html5.svg";
 import CSSIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
-import ChromeIcon from "@/assets/icons/chrome.svg";
-import GithubIcon from "@/assets/icons/github.svg";
+import EslintIcon from "@/assets/icons/eslint.svg";
+import NextIcon from "@/assets/icons/next.svg";
+import ExpressIcon from "@/assets/icons/express.svg";
+import GitIcon from "@/assets/icons/git.svg";
+import DockerIcon from "@/assets/icons/docker.svg";
+import VueIcon from "@/assets/icons/vue.svg";
+import NodeIcon from "@/assets/icons/node.svg";
+import MongodbIcon from "@/assets/icons/mongodb.svg";
+import MySQLIcon from "@/assets/icons/mysql.svg";
+import TypeScriptIcon from "@/assets/icons/typescript.svg";
 import { useRef } from "react";
 
 const frontStackItemsArray = [
@@ -34,46 +42,46 @@ const frontStackItemsArray = [
     },
     {
         title: "Vue",
-        iconType: ChromeIcon,
+        iconType: VueIcon,
     },
     {
         title: "ESLint",
-        iconType: GithubIcon,
+        iconType: EslintIcon,
     },
     {
         title: "TypeScript",
-        iconType: GithubIcon,
+        iconType: TypeScriptIcon,
     },
 ];
 
 const backStackItemsArray = [
     {
         title: "Node.js",
-        iconType: JavascriptIcon,
+        iconType: NodeIcon,
     },
     {
         title: "Express",
-        iconType: ReactIcon,
+        iconType: ExpressIcon,
     },
     {
         title: "Next.js",
-        iconType: HTMLIcon,
+        iconType: NextIcon,
     },
     {
         title: "Git",
-        iconType: CSSIcon,
+        iconType: GitIcon,
     },
     {
         title: "Docker",
-        iconType: ChromeIcon,
+        iconType: DockerIcon,
     },
     {
         title: "MongoDB",
-        iconType: GithubIcon,
+        iconType: MongodbIcon,
     },
     {
         title: "MySQL",
-        iconType: GithubIcon,
+        iconType: MySQLIcon,
     },
 ];
 
@@ -130,7 +138,7 @@ export default function AboutSection() {
             <div className="container">
                 <SectionHeader
                     eyebrow="About Me"
-                    title="A little bit about me"
+                    title="A glimpse of my experiences and hobbies"
                     description="Find out more about me and my journey to becoming a developer."
                 />
                 <div className="mt-20 flex flex-col gap-8">
@@ -151,10 +159,10 @@ export default function AboutSection() {
                         <Card className="h-[320px] md:col-span-2 lg:col-span-1">
                             <CardHeader
                                 title="My Reads"
-                                description="Check it out the books that I've read"
+                                description="Check it out the books that I've been reading"
                             />
                             <div className="w-40 mx-auto mt-2 md:mt-0">
-                                <Image src={bookImage} alt="book cover" className="" />
+                                <Image src={CleanCodeCover} alt="book cover" className="" />
                             </div>
                         </Card>
 

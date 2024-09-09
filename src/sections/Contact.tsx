@@ -3,7 +3,7 @@ import grainImage from "@/assets/images/grain.jpg";
 
 export default function ContactSection() {
     return (
-        <section id="contact" className="py-16 pt-12 lg:py-24 lg:pt-20">
+        <section id="contact" className="py-16 pt-12 lg:py-24 lg:pt-22">
             <div className="container">
                 <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl text-center relative overflow-hidden z-0 md:text-left">
                     <div
@@ -16,21 +16,31 @@ export default function ContactSection() {
                                 I am available for new projects!
                             </h2>
                             <p className="text-sm mt-2 md:text-base">
-                            Looking to expand your team? Let’s work together to create exceptional software solutions!
+                                Looking to expand your team? Let’s work together to create
+                                exceptional software solutions!
                             </p>
                         </div>
                         <div className="flex flex-col gap-4">
-                            <a href="https://www.linkedin.com/in/lucascq/" className="contact">
+                            <a
+                                href="https://www.linkedin.com/in/lucascq/"
+                                target="_blank"
+                                className="contact"
+                            >
                                 <span className="font-semibold">LinkedIn</span>
                                 <ArrowUpRightIcon className="size-4" />
                             </a>
-                            <a href="https://github.com/1lucascq/" className="contact">
+                            <a
+                                href="https://github.com/1lucascq/"
+                                className="contact"
+                                target="_blank"
+                            >
                                 <span className="font-semibold">GitHub</span>
                                 <ArrowUpRightIcon className="size-4" />
                             </a>
                             <a
                                 href="https://wa.me/5538999334321?text=Hello%20there!%20Let%27s%20get%20in%20touch"
                                 className="contact"
+                                target="_blank"
                             >
                                 <span className="font-semibold">WhatsApp</span>
                                 <ArrowUpRightIcon className="size-4" />

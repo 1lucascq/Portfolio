@@ -1,10 +1,10 @@
-'use client';
+"use client";
 import Image from "next/image";
 import CardHeader from "@/components/CardHeader";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 import TechStackItems from "@/components/TechStackItems";
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
 import bookImage from "@/assets/images/book-cover.png";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
@@ -40,11 +40,10 @@ const frontStackItemsArray = [
         title: "ESLint",
         iconType: GithubIcon,
     },
-	{
+    {
         title: "TypeScript",
         iconType: GithubIcon,
     },
-
 ];
 
 const backStackItemsArray = [
@@ -76,7 +75,6 @@ const backStackItemsArray = [
         title: "MySQL",
         iconType: GithubIcon,
     },
-
 ];
 
 const hobbies = [
@@ -128,7 +126,7 @@ export default function AboutSection() {
     const constraintRef = useRef(null);
 
     return (
-        <section className="py-20 lg:py-28">
+        <section id="about" className="py-20 lg:py-28">
             <div className="container">
                 <SectionHeader
                     eyebrow="About Me"
@@ -170,7 +168,7 @@ export default function AboutSection() {
                                 {hobbies.map((hobby) => (
                                     <motion.div
                                         key={hobby.title}
-                                        className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+                                        className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute cursor-pointer"
                                         style={{
                                             left: hobby.left,
                                             top: hobby.top,
@@ -178,10 +176,10 @@ export default function AboutSection() {
                                         drag
                                         dragConstraints={constraintRef}
                                     >
-                                        <span>
-                                            {hobby.emoji}
+                                        <span>{hobby.emoji}</span>
+                                        <span className="font-medium text-gray-950">
+                                            {hobby.title}
                                         </span>
-                                        <span className="font-medium text-gray-950">{hobby.title}</span>
                                     </motion.div>
                                 ))}
                             </div>

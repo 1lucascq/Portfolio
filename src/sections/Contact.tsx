@@ -10,21 +10,35 @@ export default function ContactSection() {
                         className="absolute inset-0 opacity-5 -z-10"
                         style={{ backgroundImage: `url(${grainImage.src})` }}
                     />
-                    <div className="flex flex-col gap-8 items-center md:flex-row lg:gap-16">
+                    <div className="flex flex-col gap-8 items-center lg:gap-16">
                         <div>
                             <h2 className="font-serif text-2xl md:text-3xl">
-                                Let&apos;s create something amazing together
+                                I am available for new projects!
                             </h2>
                             <p className="text-sm mt-2 md:text-base">
-                                Ready to bring your next project to life? Contact me and we can make
-                                it happen
+                            Looking to expand your team? Let’s work together to create exceptional software solutions!
                             </p>
                         </div>
-                        <div>
-                            <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
-                                <span className="font-semibold">Contact Me</span>
+                        <div className="flex flex-col gap-4">
+                            <a href="https://www.linkedin.com/in/lucascq/" className="contact">
+                                <span className="font-semibold">LinkedIn</span>
                                 <ArrowUpRightIcon className="size-4" />
-                            </button>
+                            </a>
+                            <a href="https://github.com/1lucascq/" className="contact">
+                                <span className="font-semibold">GitHub</span>
+                                <ArrowUpRightIcon className="size-4" />
+                            </a>
+                            <a
+                                href="https://wa.me/5538999334321?text=Hello%20there!%20Let%27s%20get%20in%20touch"
+                                className="contact"
+                            >
+                                <span className="font-semibold">WhatsApp</span>
+                                <ArrowUpRightIcon className="size-4" />
+                            </a>
+                            <a className="contact" href="mailto:1lucascq@gmail.com">
+                                <span className="font-semibold">Email</span>
+                                <ArrowUpRightIcon className="size-4" />
+                            </a>
                         </div>
                     </div>
                 </div>

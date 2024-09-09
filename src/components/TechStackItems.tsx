@@ -21,7 +21,7 @@ export default function TechStackItems({
             <div className={twMerge("flex flex-none py-0.5 gap-6 pr-6", itemsWrapperClassName)}>
                 {[
                     ...new Array(2).fill(0).map((_, i) => (
-                        <>
+                        <div key={i} className="flex flex-none gap-6">
                             {items.map((item) => (
                                 <div
                                     key={item.title}
@@ -31,7 +31,7 @@ export default function TechStackItems({
                                     <span className="font-semibold">{item.title}</span>
                                 </div>
                             ))}
-                        </>
+                        </div>
                     )),
                 ]}
             </div>

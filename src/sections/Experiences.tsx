@@ -71,7 +71,6 @@ export default function Experiences() {
         fetch(API_URL)
             .then((response) => response.json())
             .then((repos) => {
-                console.log(repos);
                 const deployedRepositoriesArray: Experience[] = [];
                 repos.forEach((repo: GithubRepository) => {
                     if (repo.homepage) {
@@ -80,7 +79,7 @@ export default function Experiences() {
                         const link: string = repo.homepage;
                         const year: string = repo.created_at.slice(0, 4);
                         const results: string[] = repo.description.split(";");
-                        const imageURL: string = `https://raw.githubusercontent.com/1lucascq/${repo.name}/master/screenshot.png`;
+                        const imageURL: string = `https://raw.githubusercontent.com/1lucascq/${repo.name}/master/screenshot.avif`;
                         deployedRepositoriesArray.push({
                             company,
                             title,
@@ -100,15 +99,13 @@ export default function Experiences() {
             .catch((error) => console.error("Error fetching repositories:", error));
     }, []);
 
-    console.log(experiencesAndProjects);
-
     return (
         <section id="projects" className="pb-16 lg:py-24">
             <div className="container">
                 <SectionHeader
                     eyebrow="Real-World Results"
                     title="Featured Projects"
-                    description="See how I transformed concepts into engaging digital experiences."
+                    description="From concept to completion — see my featured software projects."
                 />
                 <div className="mt-10 flex flex-col gap-20 md:mt-20">
                     {experiencesAndProjects.map((project, index) => (

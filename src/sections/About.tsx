@@ -138,8 +138,8 @@ export default function AboutSection() {
             <div className="container">
                 <SectionHeader
                     eyebrow="About Me"
-                    title="A glimpse of my experiences and hobbies"
-                    description="Find out more about me and my journey to becoming a developer."
+                    title="From Tech to Hobbies"
+                    description="Get to know the tools, interests, and books shaping my developer career."
                 />
                 <div className="mt-20 flex flex-col gap-8">
                     <Card className="h-[320px] md:col-span-3">

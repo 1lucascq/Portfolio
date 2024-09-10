@@ -5,14 +5,14 @@ export default function ContactSection() {
     return (
         <section id="contact" className="py-16 pt-12 lg:py-24 lg:pt-22">
             <div className="container">
-                <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl text-center relative overflow-hidden z-0 md:text-left">
+                <div className="bg-gradient-to-r from-primary to-secondary text-gray-900 py-8 px-10 rounded-3xl text-center relative overflow-hidden z-0 md:text-left">
                     <div
                         className="absolute inset-0 opacity-5 -z-10"
                         style={{ backgroundImage: `url(${grainImage.src})` }}
                     />
                     <div className="flex flex-col gap-8 items-center lg:gap-16">
                         <div>
-                            <h2 className="font-serif text-2xl md:text-3xl">
+                            <h2 className="font-serif text-2xl md:text-3xl text-tertiary">
                                 I am available for new projects!
                             </h2>
                             <p className="text-sm mt-2 md:text-base">

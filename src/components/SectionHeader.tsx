@@ -2,7 +2,7 @@ export default function SectionHeader({ eyebrow, title, description }: { eyebrow
     return (
         <>
             <div className="flex justify-center">
-                <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
+                <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">
                     {eyebrow}
                 </p>
             </div>

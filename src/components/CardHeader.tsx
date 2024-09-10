@@ -5,7 +5,7 @@ export default function CardHeader({ title, description, className }: { title: s
     return (
         <div className={twMerge("flex flex-col p-6 md:py-8 md:px-10", className)}>
             <div className="inline-flex items-center gap-2">
-                <StarIcon className="size-9 text-emerald-300" />
+                <StarIcon className="size-9 text-primary" />
                 <h3 className="font-serif text-3xl">{title}</h3>
             </div>
             <p className="text-sm text-white/60 mt-2 lg:text-base">{description}</p>

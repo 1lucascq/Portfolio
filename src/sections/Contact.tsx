@@ -5,7 +5,9 @@ export default function ContactSection() {
     return (
         <section id="contact" className="py-16 pt-12 lg:py-24 lg:pt-22">
             <div className="container">
-                <div className="bg-gradient-to-r from-primary to-secondary text-gray-900 py-8 px-10 rounded-3xl text-center relative overflow-hidden z-0 md:text-left">
+                <div
+                    className="bg-gradient-to-b from-primary to-secondary text-gray-900 py-8 px-10 rounded-3xl text-center relative overflow-hidden z-0 md:text-left lg:py-16"
+                >
                     <div
                         className="absolute inset-0 opacity-5 -z-10"
                         style={{ backgroundImage: `url(${grainImage.src})` }}

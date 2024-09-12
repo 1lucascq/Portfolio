@@ -73,7 +73,7 @@ export default function Experiences() {
             .then((repos) => {
                 const deployedRepositoriesArray: Experience[] = [];
                 repos.forEach((repo: GithubRepository) => {
-                    if (repo.homepage) {
+                    if (repo.homepage && repo.description) {
                         const company: string = "Project Showcase";
                         const title: string = repo.name.replaceAll("_", " ");
                         const link: string = repo.homepage;

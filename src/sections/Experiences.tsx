@@ -28,18 +28,6 @@ interface Experience {
 
 const API_URL = "https://api.github.com/users/1lucascq/repos";
 const experiences: Experience[] = [
-    // {
-    //     company: "Freelancer",
-    //     year: "2022",
-    //     title: "Frontend Developer",
-    //     results: [
-    //         { title: "Enhanced user experience by 40%" },
-    //         { title: "Improved site speed by 50%" },
-    //         { title: "Increased mobile traffic by 35%" },
-    //     ],
-    //     link: "https://youtu.be/4k7IdSLxh6w",
-    //     image: darkSaasLandingPage,
-    // },
     {
         company: "Backlgrs",
         year: "2022",
@@ -74,7 +62,7 @@ export default function Experiences() {
                 const deployedRepositoriesArray: Experience[] = [];
                 repos.forEach((repo: GithubRepository) => {
                     if (repo.homepage && repo.description) {
-                        const company: string = "Project Showcase";
+                        const company: string = "Demo Project";
                         const title: string = repo.name.replaceAll("_", " ");
                         const link: string = repo.homepage;
                         const year: string = repo.created_at.slice(0, 4);
@@ -103,7 +91,7 @@ export default function Experiences() {
         <section id="projects" className="pb-16 lg:py-24">
             <div className="container">
                 <SectionHeader
-                    eyebrow="Real-World Results"
+                    eyebrow="Real-World Results & Demo Projects"
                     title="Featured Projects"
                     description="From concept to completion — see my featured software projects."
                 />

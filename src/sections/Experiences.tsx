@@ -26,7 +26,7 @@ interface Experience {
     imageURL?: string;
 }
 
-const API_URL = "https://api.github.com/users/1lucascq/repos";
+const API_URL = "https://api.github.com/users/1lucascq/repos?per_page=50";
 const experiences: Experience[] = [
     {
         company: "Backlgrs",
